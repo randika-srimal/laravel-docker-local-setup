@@ -24,11 +24,7 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     restart: always
-    environment:
-      PMA_HOST: mysql
-      PMA_USER: root
-      PMA_PASSWORD: root
-      MYSQL_PASSWORD: root
-      MYSQL_ROOT_PASSWORD: root
+    env_file:
+      - ./env/phpmyadmin.env
     ports:
       - "8002:80"
