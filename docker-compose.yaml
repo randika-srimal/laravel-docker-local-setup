@@ -15,8 +15,11 @@ services:
     volumes:
       - ./src:/var/www/html:delegated
   mysql:
-    image: mysql:5.7
+    image: mysql:8.0.25
+    command: --default-authentication-plugin=mysql_native_password
     restart: always
+    ports:
+      - 3306:3306
     env_file:
       - ./env/mysql.env
     volumes:
@@ -28,3 +31,10 @@ services:
       - ./env/phpmyadmin.env
     ports:
       - "8002:80"
+  mailhog:
+    image: mailhog/mailhog
+    logging:
+      driver: 'none'  # disable saving logs
+    ports:
+      - 1025:1025 # smtp server
+      - 8003:8025
