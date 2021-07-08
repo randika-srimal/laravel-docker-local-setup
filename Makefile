@@ -1,8 +1,18 @@
-shell:
-	docker-compose exec -u ${UID}:${UID} php sh
+#!/usr/bin/make
 
-up:
-	docker-compose up --build -d --remove-orphans
+SHELL = /bin/sh
 
-down:
-	docker-compose down --remove-orphans
+UID := $(shell id -u)
+GID := $(shell id -g)
+
+export UID
+export GID
+
+local-shell:
+	docker-compose -f local-docker-compose.yaml exec -u ${UID}:${GID} app sh
+
+local-up:
+	UID=${UID} GID=${GID} docker-compose -f local-docker-compose.yaml up --build -d --remove-orphans
+
+local-down:
+	docker-compose -f local-docker-compose.yaml down --remove-orphans
