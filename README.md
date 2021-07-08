@@ -7,8 +7,9 @@
 - Mailhog SMTP Testing service (Mailtrap like service for local use)
 - Run laravel apps instantly on any development environment
 
+## Requirements
 
-
+- [Install Docker and Docker Compose tools](https://docs.docker.com/get-docker/)
 
 ## How to intergrate to your laravel project
 
@@ -22,7 +23,8 @@
 
 2. Checkout to the branch which meet your requirements.
 
-- version-1 : Nodejs v14.17.1, PHP v8.0, MySQL v8.0.25, Composer v2.1.3
+- version-1 : Nodejs v14.17.1 | PHP v8.0 | MySQL v8.0.25 | Composer v2.1.3 (Laravel 8 requirements)
+- version-2 : Nodejs v10.24.1 | PHP v7.3 | MySQL v5.7 | Composer v1.10.22 (Laravel 5.7 requirements)
 
 3. Make copies of env files inside `env` directory and rename as below.
 You can change default values if wants, but good to go with defaults for local developement. 
@@ -85,5 +87,9 @@ From this shell you can execute commands like `composer install`, `npm install` 
 #### Where to init git if I don't need these configs in my app repository. 
 
 Just init your git repo inside `src` directory while keeping these configs outside of your project files.
+
+#### "I'm getting this error" kind issues . 
+
+You Google first and I'm sure you will find a fix or tell me, then I will Google too and come up with a solution :blush: .
 
   
