@@ -90,6 +90,6 @@ Just init your git repo inside `src` directory while keeping these configs outsi
 
 #### "I'm getting this error" kind issues . 
 
-You Google first and I'm sure you will find a fix or tell me, then I will Google too and come up with a solution :blush: .
+You Google first and I'm sure you will find a fix or tell me by creating a issue, then I will Google, ask my friends and come up with a solution :blush: .
 
   
