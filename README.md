@@ -22,6 +22,8 @@
 
 2. Checkout to the branch which meet your requirements.
 
+- version-1 : Nodejs v14.17.1, PHP v8.0, MySQL v8.0.25, Composer v2.1.3
+
 3. Make copies of env files inside `env` directory and rename as below.
 You can change default values if wants, but good to go with defaults for local developement. 
 
