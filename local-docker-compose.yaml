@@ -16,7 +16,7 @@ services:
         UID: ${UID}
         GID: ${GID}
     volumes:
-      - ./src:/var/www/html:delegated
+      - ./src:/var/www/html
   mysql:
     image: mysql:5.7
     restart: always
