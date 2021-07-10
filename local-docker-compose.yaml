@@ -16,7 +16,7 @@ services:
         UID: ${UID}
         GID: ${GID}
     volumes:
-      - ./src:/var/www/html:delegated
+      - ./src:/var/www/html
   mysql:
     image: mysql:8.0.25
     command: --default-authentication-plugin=mysql_native_password
